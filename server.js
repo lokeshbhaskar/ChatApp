@@ -22,6 +22,9 @@ app.get("/",(req,res)=>{
     return res.sendFile("/public/index.html");
 })
 
+// Use the environment's port or default to 3000
+const port = process.env.PORT || 3000;
+
 server.listen(3000, () => 
-console.log(`Server started at port:3000`)
+console.log(`Server started at ${port}`)
 );
